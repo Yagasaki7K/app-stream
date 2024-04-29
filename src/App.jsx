@@ -5,6 +5,8 @@ function App() {
     const [inputChannel, setInputChannel] = useState('')
     const [channel, setChannel] = useState('todo_mundo_ama_br')
 
+    const isProd = thetwitch || localhost
+
     return (
         <AppDetails>
             <div className="overflow" />
@@ -13,7 +15,7 @@ function App() {
                 <button onClick={() => setChannel(inputChannel)}>Search Channel</button>
             </div>
             <div className="player">
-                <iframe id="twitchPlayer" src={"https://player.twitch.tv/?channel=" + channel + "&muted=true&parent=localhost"} allowfullscreen autoPlay />
+                <iframe id="twitchPlayer" src={"https://player.twitch.tv/?channel=" + channel + "&muted=true&parent=" + isProd} allowfullscreen autoPlay />
             </div>
             <div className="copyright">
                 ©&nbsp;2024 - {new Date().getFullYear()}&nbsp;<a href="https://github.com/Yagasaki7K/app-stream" target="_blank" rel="noreferrer">app-stream</a>&nbsp;by&nbsp;<a href="https://yagasaki.dev" target="_blank" rel="noreferrer">Yagasaki7K</a>&nbsp;<span>|</span>&nbsp;Todas as imagens são marcas registradas dos seus respectivos proprietários
