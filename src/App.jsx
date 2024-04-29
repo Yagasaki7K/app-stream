@@ -5,7 +5,7 @@ function App() {
     const [inputChannel, setInputChannel] = useState('')
     const [channel, setChannel] = useState('todo_mundo_ama_br')
 
-    const isProd = thetwitch || localhost
+    const isProd = 'thetwitch' || 'localhost'
 
     return (
         <AppDetails>
