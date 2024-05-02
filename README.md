@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/Yagasaki7K/app-stream/assets/23272064/97f45988-c294-48e0-b3ea-289685ad105c" width="200"/>
+   <img src="https://github.com/Yagasaki7K/app-stream/assets/23272064/1d0c410d-7d45-4b52-8b4c-4781cfb38e65" width="200"/>
 </p>
 
 <p align="center">
