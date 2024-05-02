@@ -41,7 +41,7 @@ function App() {
                 <iframe id="twitchPlayer" src={"https://player.twitch.tv/?channel=" + channel + "&muted=true&parent=" + isProd} allowFullScreen autoPlay />
 
                 {isChat ?
-                    <iframe id="twitchChat" className="chat" src={"https://www.twitch.tv/embed/" + channel + "/chat?parent=" + isProd} allowFullScreen />
+                    <iframe id="twitchChat" className="chat" src={"https://www.twitch.tv/embed/" + channel + "/chat?darkpopout&parent=" + isProd} allowFullScreen />
                     : null
                 }
             </div>
