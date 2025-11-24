@@ -57,6 +57,8 @@ export default App
 const AppDetails = styled.div`
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    position: relative;
 
     input, button, iframe {
         border-radius: 15px;
@@ -72,12 +74,18 @@ const AppDetails = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: clamp(0.75rem, 1vw, 1.5rem) clamp(1rem, 2vw, 2.5rem);
+        max-width: 1600px;
+        margin: 0 auto;
 
         input, button {
             border: 2px solid var(--border);
             outline: none;
             padding: 10px 20px;
-            margin: 1rem 0;
+            margin: 0;
 
             @media (max-width: 768px) {
                 padding: 10px 10px;
@@ -89,7 +97,8 @@ const AppDetails = styled.div`
             font-size: 18px;
             background: var(--purple);
             color: var(--font-light);
-            margin-right: 1rem;
+            flex: 0 0 auto;
+            padding-inline: 1.5rem;
 
             &:hover {
                 cursor: pointer;
@@ -98,39 +107,57 @@ const AppDetails = styled.div`
         }
 
         input {
-            width: 50%;
+            flex: 1 1 280px;
             height: 50px;
             font-size: 18px;
             color: white;
             background-color: transparent;
-            margin-right: 1rem;
+            min-width: 0;
         }
     }
 
     .player {
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 0 2rem;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: clamp(0.5rem, 2vw, 3rem);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1920px;
 
         iframe {
-            width: 90%;
-            height: 51.4rem;
+            flex: 1 1 720px;
+            width: 100%;
+            max-width: 1280px;
+            aspect-ratio: 16 / 9;
+            height: auto;
             border: none;
+            box-shadow: 0 10px 30px rgb(0 0 0 / 0.2);
+
+            @media (min-width: 1600px) {
+                max-width: 1600px;
+            }
 
             @media (max-width: 768px) {
-                height: 30rem;
+                flex-basis: 100%;
             }
         }
 
         .chat {
-            width: 20%;
-            height: 51.4rem;
+            flex: 0 1 360px;
+            max-width: 420px;
+            min-width: 260px;
+            aspect-ratio: 9 / 16;
+            height: auto;
             border: none;
-            margin-left: 1rem;
+            margin-left: 0;
 
             @media (max-width: 768px) {
-                height: 30rem;
+                max-width: none;
+                width: 100%;
+                aspect-ratio: 16 / 9;
             }
         }
     }
